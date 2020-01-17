@@ -3,8 +3,6 @@
 
 <!-- badges: start -->
 
-[![CRAN
-status](https://www.r-pkg.org/badges/version/tweetio)](https://cran.r-project.org/package=tweetio)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![R build
 status](https://github.com/knapply/networksf/workflows/R-CMD-check/badge.svg)](https://github.com/knapply/networksf/actions?workflow=R-CMD-check)
@@ -13,6 +11,8 @@ status](https://ci.appveyor.com/api/projects/status/github/knapply/networksf?bra
 [![Travis-CI Build
 Status](https://travis-ci.org/knapply/networksf.svg?branch=master)](https://travis-ci.org/knapply/networksf)
 [![Depends](https://img.shields.io/badge/Depends-GNU_R%3E=3.3-blue.svg)](https://www.r-project.org/)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/networksf)](https://cran.r-project.org/package=networksf)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![GitHub code size in
