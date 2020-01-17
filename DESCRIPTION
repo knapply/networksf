@@ -1,0 +1,31 @@
+Package: networksf
+Title: Spatial Networks
+Version: 0.1
+Authors@R: 
+    person("Brendan", "Knapp", 
+           email = "brendan.g.knapp@gmail.com", 
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-3284-4972"))
+Description: 
+    `{networksf}` provides data structures and routines facilitating spatial network analysis.
+License: GPL-3 + file LICENSE
+Depends: R (>= 3.3)
+SystemRequirements: C++11
+LinkingTo:
+    Rcpp
+Imports:
+    network,
+    Rcpp,
+    sf
+Suggests:
+    knitr,
+    testthat (>= 2.1.0)
+Remotes: 
+    knapply/network
+URL: https://github.com/knapply/networksf, https://knapply.github.io/networksf
+BugReports: https://github.com/knapply/networksf/issues
+Encoding: UTF-8
+LazyData: yes
+RoxygenNote: 7.0.2
+Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr

@@ -1,0 +1,34 @@
+# Travis configuration guide for R language:
+#   https://docs.travis-ci.com/user/languages/r/
+#   https://github.com/craigcitro/r-travis/wiki/Porting-to-native-R-support-in-Travis
+
+
+language: r
+sudo: required
+cache: packages
+
+warnings_are_errors: true
+
+os:
+  - linux
+  - osx
+
+before_install:
+
+
+jobs:
+  include:
+  - r: devel
+  - r: release
+  - r: 3.5
+  - r: 3.4
+  - r: 3.3
+  
+addons:
+  apt:
+    packages:
+      - libudunits2-dev
+      - libgdal-dev
+
+after_success:
+  - Rscript -e 'covr::codecov()'
