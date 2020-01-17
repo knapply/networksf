@@ -3,6 +3,9 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/tweetio)](https://cran.r-project.org/package=tweetio)
+[![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![R build
 status](https://github.com/knapply/networksf/workflows/R-CMD-check/badge.svg)](https://github.com/knapply/networksf/actions?workflow=R-CMD-check)
 [![AppVeyor build

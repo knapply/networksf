@@ -1,0 +1,3 @@
+as_networksf <- function() {
+  
+}
