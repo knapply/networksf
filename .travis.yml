@@ -30,5 +30,13 @@ addons:
       - libudunits2-dev
       - libgdal-dev
 
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install llvm &&
+    export PATH="/usr/local/opt/llvm/bin:$PATH" &&
+    export LDFLAGS="-L/usr/local/opt/llvm/lib" &&
+    export CFLAGS="-I/usr/local/opt/llvm/include"; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo ldconfig; fi
+  - R -e 'install.packages("rgdal", repos="http://R-Forge.R-project.org")'
+
 after_success:
   - Rscript -e 'covr::codecov()'

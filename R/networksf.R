@@ -1,3 +1,4 @@
-as_networksf <- function() {
-  
+as_networksf <- function(x, ...) {
+  UseMethod("as_networksf")
 }
+

@@ -11,3 +11,5 @@
 ^appveyor\.yml$
 ^\.github$
 ^LICENSE\.md$
+^playground$
+^data-raw$
