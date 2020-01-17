@@ -3,9 +3,9 @@
 
 <!-- badges: start -->
 
-[![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![R build
 status](https://github.com/knapply/networksf/workflows/R-CMD-check/badge.svg)](https://github.com/knapply/networksf/actions?workflow=R-CMD-check)
+[![Lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/knapply/networksf?branch=master&svg=true)](https://ci.appveyor.com/project/knapply/networksf)
 [![Travis-CI Build
