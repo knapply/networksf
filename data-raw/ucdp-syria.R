@@ -9,16 +9,15 @@
 
 # URLs ===================================================================================
 data_url <- "http://ucdp.uu.se/downloads/ged/ged_syria.csv.zip"
-codebook_url <- "https://ucdp.uu.se/downloads/ged/ged191.pdf"
-
+file_name <- "ged_syria.csv"
 # get data ===============================================================================
 temp_file <- tempfile()
-target_dir <- "inst/datasets/ucdp_syria/"
+temp_dir <- tempdir()
 download.file(data_url, destfile = temp_file)
-unzip(temp_file, files = "ged_syria.csv", exdir = target_dir)
+unzip(temp_file, files = file_name, exdir = temp_dir)
 
-# get codebook ===========================================================================
-download.file(codebook_url, destfile = paste0(target_dir, "ged191.pdf"))
+
+file_path <- dir(temp_dir)
 
 # prep data ==============================================================================
 library(data.table)
@@ -56,3 +55,5 @@ unnested <- setDT(tidyr::unnest(split_dyads, cols = c(side_a, side_b)))
 
 ucdp_simple_df <- copy(unnested)[, -"id"]
 
+# ucdp_bipartite_df
+unnested
