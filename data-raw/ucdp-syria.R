@@ -17,14 +17,12 @@ download.file(data_url, destfile = temp_file)
 unzip(temp_file, files = file_name, exdir = temp_dir)
 
 
-file_path <- dir(temp_dir)
+file_path <- dir(temp_dir, pattern = file_name, full.names = TRUE)
 
 # prep data ==============================================================================
 library(data.table)
 
-data_file <- "inst/datasets/ucdp_syria/ged_syria.csv"
-
-ucdp_syria_df <- data.table::fread(data_file)
+ucdp_syria_df <- data.table::fread(file_path)
 
 actors_to_ignore <- c(
   "Civilians",

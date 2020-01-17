@@ -25,9 +25,9 @@ map_mold <- function(.x, .f, .mold, ...) {
 .map2 <- function(.x, .y, .f, ...) {
   out <- mapply(.f, .x, .y, MoreArgs = list(...), SIMPLIFY = FALSE)
   if (length(out) == length(.x)) {
-    set_names(out, names(.x))
+    .set_names(out, names(.x))
   } else {
-    set_names(out, NULL)
+    .set_names(out, NULL)
   }
 }
 .map2_lgl <- function(.x, .y, .f, ...) {
@@ -63,7 +63,7 @@ args_recycle <- function(args) {
 }
 
 probe <- function(.x, .p, ...) {
-  if (is_logical(.p)) {
+  if (is.logical(.p)) {
     stopifnot(length(.p) == length(.x))
     .p
   } else {
@@ -107,4 +107,8 @@ vec_index <- function(x) {
   stopifnot(length(x) == length(nm))
   names(x) <- nm
   x
+}
+
+`%||%` <- function(lhs, rhs) {
+  if (is.null(lhs)) rhs else lhs
 }
