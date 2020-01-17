@@ -1,0 +1,21 @@
+destination: docs
+
+url: https://knapply.github.io/networksf
+
+template:
+  params:
+    bootswatch: cerulean
+    # ganalytics:
+
+
+navbar:
+  title: ~
+  type: default
+  left:
+    - text: Functions and Data
+      href: reference/index.html
+  right:
+    - icon: fa-twitter
+      href: https://twitter.com/ds4da
+    - icon: fa-github fa-lg
+      href: https://github.com/knapply/networksf
